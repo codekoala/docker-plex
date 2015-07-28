@@ -18,4 +18,4 @@ lxc.pts = 1024
 lxc.kmsg = 0
 
 ## mounts
-lxc.mount.entry = /mnt/video /video none bind,create=dir 0 0
+lxc.mount.entry = /mnt/video /var/lib/lxc/[NAME]/rootfs/video none bind,create=dir 0 0
