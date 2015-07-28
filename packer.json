@@ -1,0 +1,11 @@
+{
+  "builders": [{
+    "type": "docker",
+    "image": "codekoala/arch",
+    "export_path": "dist/plex.tar"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "script": "setup.sh"
+  }]
+}

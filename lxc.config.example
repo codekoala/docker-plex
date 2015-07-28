@@ -1,0 +1,21 @@
+# Template used to create this container: /usr/share/lxc/templates/lxc-archlinux
+# Parameters passed to the template:
+# For additional config options, please look at lxc.container.conf(5)
+lxc.network.type = veth
+lxc.network.flags = up
+lxc.network.link = br0
+lxc.network.name = eth0
+lxc.network.hwaddr = 00:11:22:33:44:55
+
+lxc.rootfs = /var/lib/lxc/[NAME]/rootfs
+lxc.utsname = [NAME]
+lxc.arch = x86_64
+lxc.include = /usr/share/lxc/config/archlinux.common.conf
+
+## systemd within the lxc
+lxc.autodev = 1
+lxc.pts = 1024
+lxc.kmsg = 0
+
+## mounts
+lxc.mount.entry = /mnt/video /video none bind,create=dir 0 0
